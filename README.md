@@ -9,7 +9,11 @@ including comments from people who have visited these establishments. The NLP co
 
 # Instructions 
 
-Just run nlp.
+
+Run main to generate the model to production.
+Deploy the model to production:
+Running deploy.py you will create a server within your pc which can be used to respond clients requests. 
+See a successful request in deploy-verified.ipynb. 
 
 # Thanks
 
