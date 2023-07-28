@@ -33,20 +33,30 @@ Example Output:
 
 ## Deployment Information
 
-To deploy the model, you must run `training.py`, it will generate the model "doc2vec_model.pkl",
-which will be found at `mlruns/0/<run id>/artifacts/model/doc2vec_model.pkl`. To deploy the model to production on Google Cloud, follow these steps:
+To deploy the restaurant similarity recommendation system model, you can begin by running the `training.py` script. This will generate the essential model file called "doc2vec_model.pkl". Once created, you can find the model in the `mlruns/0/<run id>/artifacts/model/` directory.
+
+To proceed with the production deployment on Google Cloud, kindly follow the step-by-step instructions below:
+
+1. Make sure you have a Google Cloud account set up and logged in.
+2. Create a new project on Google Cloud if you haven't already.
+3. Verify that Google Run and Google Build services are activated for your project.
+
+If you don't have the Google Cloud SDK Command-Line Interface (CLI) installed, you can install it by referring to the documentation at `https://cloud.google.com/sdk/docs/install?hl=en`. Once installed, log in and select your project using the provided instructions in the command line.
+
+Afterwards, execute the following commands to deploy the model:
+
 ```bash
 gcloud builds submit --tag gcr.io/<APP_ID>/similarity_measure
 gcloud run deploy --image gcr.io/<APP_ID>/similarity_measure --platform managed
 ```
 
-Additionally, you can refer to a successful request example in `app-request.py`, and the web crawling classes are available in the `WebCrawling` folder.
+For your convenience, you can explore a successful request example in the `app-request.py` file. Additionally, if you're interested in the web crawling classes, you can find them available in the `WebCrawling` folder.
 
-## Thank You
 
-We sincerely appreciate your time and interest in our restaurant similarity recommendation system. If you have any questions or feedback, please feel free to reach out.
+## Conclusion
+
+Thank you for considering our restaurant similarity recommendation system. We hope that our model and deployment guide have been helpful to you. If you have any questions or require assistance, please don't hesitate to contact us.
 
 Best Regards,
 
 M.A. Sarmento
-
